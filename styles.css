@@ -1,6 +1,6 @@
 /* =========================================================
    NURLIFT WEBSITE
-   Core Brand Styles
+   Clean Brand Styles
    ========================================================= */
 
 
@@ -39,7 +39,6 @@
 
 :root {
   --ink: #1c1c1e;
-
   --blue: #2054c9;
   --cyan: #26bdf3;
 
@@ -115,10 +114,7 @@ p {
 }
 
 .container {
-  width: min(
-    calc(100% - 40px),
-    var(--max-width)
-  );
+  width: min(calc(100% - 40px), var(--max-width));
 
   margin-left: auto;
   margin-right: auto;
@@ -191,7 +187,7 @@ p {
 
 
 /* =========================================================
-   5. LANGUAGE SWITCHER
+   5. LANGUAGE
    ========================================================= */
 
 .lang {
@@ -542,91 +538,90 @@ section {
 
 /* =========================================================
    9. DISCOVERY FLOW
+   ICONS OUTSIDE BOXES
    ========================================================= */
 
 .flow {
-  margin-top: 48px;
+  position: relative;
+
+  margin-top: 64px;
+  margin-bottom: 50px;
 
   display: grid;
 
   grid-template-columns:
     repeat(6, 1fr);
 
-  gap: 10px;
+  gap: 30px;
+
+  align-items: start;
 }
+
+
+/* each discovery item */
 
 .flow > div {
   position: relative;
 
-  min-height: 132px;
+  min-height: 0 !important;
 
-  padding:
-    20px 18px;
+  padding: 0 !important;
 
-  overflow: hidden;
+  display: flex !important;
 
-  border:
-    1px solid var(--line);
+  flex-direction: column !important;
 
-  border-radius:
-    18px;
+  justify-content: flex-start !important;
 
-  background:
-    var(--cloud);
+  align-items: center !important;
 
-  font-weight: 700;
-}
+  gap: 18px !important;
 
-/*
-  Nurlift visual particle detail.
-  This is decorative only.
-*/
+  border: 0 !important;
 
-.flow > div::before {
-  content: "";
+  border-radius: 0 !important;
 
-  position: absolute;
+  background: transparent !important;
 
-  width: 70px;
-  height: 70px;
+  overflow: visible !important;
 
-  top: -30px;
-  right: -18px;
-
-  border-radius: 50%;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--powder),
-      var(--mint)
-    );
-
-  opacity: 0.72;
-
-  pointer-events: none;
+  text-align: center;
 }
 
 
-/*
-  The real icon lives inside the HTML.
-  There are NO generated CSS icons.
-*/
+/* remove all old decorative card elements */
+
+.flow > div::before,
+.flow > div::after {
+  display: none !important;
+
+  content: none !important;
+}
+
+
+/* icons */
 
 .flow svg {
   position: relative;
 
   z-index: 2;
 
+  width: 58px !important;
+  height: 58px !important;
+
   display: block;
 
-  width: 29px;
-  height: 29px;
-
-  color: var(--blue);
-
   flex-shrink: 0;
+
+  stroke: var(--blue);
+
+  transition:
+    transform 0.22s ease,
+    stroke 0.22s ease;
 }
+
+
+/* labels */
 
 .flow span {
   position: relative;
@@ -635,10 +630,23 @@ section {
 
   display: block;
 
-  font-size: 1rem;
+  color: var(--ink);
+
+  font-size: 1.08rem;
+
   font-weight: 700;
 
-  line-height: 1;
+  line-height: 1.15;
+}
+
+
+/* subtle hover */
+
+.flow > div:hover svg {
+  transform:
+    translateY(-5px);
+
+  stroke: var(--cyan);
 }
 
 
@@ -787,7 +795,7 @@ section {
 
 
 /* =========================================================
-   11. QUESTIONS / DATA TO ACTION
+   11. QUESTIONS
    ========================================================= */
 
 .questions {
@@ -1052,7 +1060,13 @@ section {
     grid-template-columns:
       repeat(3, 1fr);
 
-    gap: 12px;
+    gap:
+      46px 30px;
+  }
+
+  .flow svg {
+    width: 54px !important;
+    height: 54px !important;
   }
 
   .cards {
@@ -1129,11 +1143,17 @@ section {
     grid-template-columns:
       repeat(2, 1fr);
 
-    gap: 10px;
+    gap:
+      42px 20px;
   }
 
-  .flow > div {
-    min-height: 125px;
+  .flow svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .flow span {
+    font-size: 1rem;
   }
 
   .cards {
@@ -1161,11 +1181,11 @@ section {
 @media (max-width: 420px) {
 
   .flow {
-    grid-template-columns: 1fr;
-  }
+    grid-template-columns:
+      repeat(2, 1fr);
 
-  .flow > div {
-    min-height: 115px;
+    gap:
+      36px 16px;
   }
 
 }
