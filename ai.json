@@ -1,0 +1,12 @@
+{
+  "name": "Nurlift",
+  "url": "https://nurlift.com/",
+  "description": "Technology and intelligence for the new era of brand discovery.",
+  "primary_product": {
+    "name": "Dropper",
+    "category": ["Brand Intelligence", "AI Discovery"],
+    "description": "Helps brands understand where they appear, how they are perceived, which narratives are growing, how they compare with competitors, and where to act."
+  },
+  "capabilities": ["Brand Intelligence", "AI Discovery", "Competitive Intelligence", "Narrative Intelligence", "Local Discovery"],
+  "languages": ["pt-BR", "en"]
+}
