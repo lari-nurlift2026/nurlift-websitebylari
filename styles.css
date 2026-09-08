@@ -358,61 +358,30 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
   .local-box { padding: 30px 24px; }
   .footer-grid { align-items: flex-start; flex-direction: column; }
 }
-/* =========================================================
-   DISCOVERY ICONS
-   Search · Social · Creators · Reviews · News · AI
-   ========================================================= */
+/* FIX DISCOVERY CARDS — use only the SVG icons from HTML */
 
-.flow div {
-  padding-top: 64px;
+.flow > div::after {
+  display: none !important;
+  content: none !important;
 }
 
-/* área do ícone */
-.flow div::after {
-  content: "";
-  position: absolute;
-  top: 22px;
-  left: 18px;
-  width: 30px;
-  height: 30px;
-  background-color: #2054c9;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.flow > div {
+  min-height: 118px !important;
+  padding: 20px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
 }
 
-/* SEARCH — lupa */
-.flow div:nth-child(1)::after {
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='%232054c9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4'/%3E%3C/svg%3E");
+.flow > div svg {
+  width: 27px !important;
+  height: 27px !important;
+  flex-shrink: 0;
 }
 
-/* SOCIAL — conexões */
-.flow div:nth-child(2)::after {
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='%232054c9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='18' cy='5' r='3'/%3E%3Ccircle cx='6' cy='12' r='3'/%3E%3Ccircle cx='18' cy='19' r='3'/%3E%3Cpath d='m8.6 10.5 6.8-4'/%3E%3Cpath d='m8.6 13.5 6.8 4'/%3E%3C/svg%3E");
-}
-
-/* CREATORS — megafone */
-.flow div:nth-child(3)::after {
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='%232054c9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 11 18-5v12L3 14v-3Z'/%3E%3Cpath d='M11.6 16.1 13 21H8l-1.4-6'/%3E%3Cpath d='M21 9v6'/%3E%3C/svg%3E");
-}
-
-/* REVIEWS — estrela */
-.flow div:nth-child(4)::after {
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='%232054c9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 2.8 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.4l6.2-.9L12 2.8Z'/%3E%3C/svg%3E");
-}
-
-/* NEWS — jornal */
-.flow div:nth-child(5)::after {
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='%232054c9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h13v16H4z'/%3E%3Cpath d='M17 8h3v10a2 2 0 0 1-2 2h-1'/%3E%3Cpath d='M7 8h7'/%3E%3Cpath d='M7 12h7'/%3E%3Cpath d='M7 16h4'/%3E%3C/svg%3E");
-}
-
-/* AI — chip */
-.flow div:nth-child(6)::after {
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='%232054c9' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='6' y='6' width='12' height='12' rx='2'/%3E%3Cpath d='M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3'/%3E%3Ccircle cx='10' cy='11' r='.7' fill='%232054c9'/%3E%3Ccircle cx='14' cy='11' r='.7' fill='%232054c9'/%3E%3Cpath d='M9.5 14h5'/%3E%3C/svg%3E");
+.flow > div span {
+  font-weight: 600;
+  line-height: 1;
 }
