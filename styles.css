@@ -357,6 +357,12 @@ p {
     112px 0 100px;
 }
 
+@media (min-width: 641px) {
+  .page-dropper .hero-inner {
+    padding-bottom: 40px;
+  }
+}
+
 .eyebrow {
   display: inline-flex;
 
