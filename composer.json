@@ -1,0 +1,25 @@
+{
+  "name": "nurlift/contact-backend",
+  "description": "Private-dependency SMTP foundation for Nurlift contact forms",
+  "type": "project",
+  "require": {
+    "php": "^8.2",
+    "ext-filter": "*",
+    "ext-json": "*",
+    "ext-openssl": "*",
+    "phpmailer/phpmailer": "^7.0",
+    "ext-ctype": "*"
+  },
+  "config": {
+    "allow-plugins": false,
+    "vendor-dir": "vendor",
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": [
+      "@php tests/contact-test.php",
+      "@php tests/contact-concurrency.php"
+    ]
+  },
+  "license": "proprietary"
+}
