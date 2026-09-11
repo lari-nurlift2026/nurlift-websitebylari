@@ -1212,8 +1212,8 @@ section {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  min-height: 88px;
-  padding: 10px 12px;
+  min-height: 76px;
+  padding: 6px 12px;
   border: 1px solid var(--line);
   border-radius: var(--radius-small);
   background: var(--cloud);
