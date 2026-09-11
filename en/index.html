@@ -1000,6 +1000,42 @@
     </p>
 
 
+    <form class="contact-form" action="/api/contact.php" method="post" data-language="en" aria-label="Book a Conversation">
+      <p class="contact-form-required">All fields are required.</p>
+      <div class="contact-form-grid">
+        <div class="contact-form-field">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required aria-describedby="contact-name-error">
+          <span class="contact-form-error" id="contact-name-error"></span>
+        </div>
+        <div class="contact-form-field">
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby="contact-email-error">
+          <span class="contact-form-error" id="contact-email-error"></span>
+        </div>
+        <div class="contact-form-field">
+          <label for="contact-phone">Phone</label>
+          <input id="contact-phone" name="phone" type="tel" autocomplete="tel" required maxlength="32" aria-describedby="contact-phone-error">
+          <span class="contact-form-error" id="contact-phone-error"></span>
+        </div>
+        <div class="contact-form-field">
+          <label for="contact-subject">Subject</label>
+          <input id="contact-subject" name="subject" type="text" autocomplete="off" required aria-describedby="contact-subject-error">
+          <span class="contact-form-error" id="contact-subject-error"></span>
+        </div>
+      </div>
+      <div class="contact-form-trap" aria-hidden="true">
+        <input name="website" type="text" tabindex="-1" autocomplete="off" aria-label="Website">
+      </div>
+      <input name="source" type="hidden" value="Nurlift EN">
+      <input name="page_language" type="hidden" value="en">
+      <input name="page" type="hidden" value="/en/">
+      <p class="contact-form-privacy">We’ll use your information only to respond to your request and manage this commercial conversation. <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+      <button class="button primary" type="submit" disabled>Book a Conversation</button>
+      <p class="contact-form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <noscript><p>Enable JavaScript to submit this form.</p></noscript>
+    </form>
+
     <div
       class="hero-actions"
       style="justify-content:center"
@@ -1010,13 +1046,6 @@
         href="/en/dropper/"
       >
         Discover Dropper
-      </a>
-
-      <a
-        class="button secondary"
-        href="mailto:hello@nurlift.com"
-      >
-        Book a Conversation
       </a>
 
     </div>
@@ -1087,6 +1116,7 @@
 
 
 <script src="/script.js"></script>
+<script src="/contact-form.js" defer></script>
 
 
 </body>

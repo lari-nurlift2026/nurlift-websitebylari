@@ -1,0 +1,9 @@
+/vendor/
+/config/contact-config.php
+/config/config.php
+/.env
+.DS_Store
+*.tmp
+*.swp
+*~
+/composer.phar

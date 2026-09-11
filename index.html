@@ -719,7 +719,43 @@
         no novo ecossistema de discovery.
       </p>
 
-      <div
+      <form class="contact-form" action="/api/contact.php" method="post" data-language="pt" aria-label="Agende uma conversa">
+      <p class="contact-form-required">Todos os campos são obrigatórios.</p>
+      <div class="contact-form-grid">
+        <div class="contact-form-field">
+          <label for="contact-name">Nome</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required aria-describedby="contact-name-error">
+          <span class="contact-form-error" id="contact-name-error"></span>
+        </div>
+        <div class="contact-form-field">
+          <label for="contact-email">E-mail</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby="contact-email-error">
+          <span class="contact-form-error" id="contact-email-error"></span>
+        </div>
+        <div class="contact-form-field">
+          <label for="contact-phone">Telefone</label>
+          <input id="contact-phone" name="phone" type="tel" autocomplete="tel" required maxlength="32" aria-describedby="contact-phone-error">
+          <span class="contact-form-error" id="contact-phone-error"></span>
+        </div>
+        <div class="contact-form-field">
+          <label for="contact-subject">Assunto</label>
+          <input id="contact-subject" name="subject" type="text" autocomplete="off" required aria-describedby="contact-subject-error">
+          <span class="contact-form-error" id="contact-subject-error"></span>
+        </div>
+      </div>
+      <div class="contact-form-trap" aria-hidden="true">
+        <input name="website" type="text" tabindex="-1" autocomplete="off" aria-label="Website">
+      </div>
+      <input name="source" type="hidden" value="Nurlift PT">
+      <input name="page_language" type="hidden" value="pt">
+      <input name="page" type="hidden" value="/">
+      <p class="contact-form-privacy">Usaremos seus dados apenas para responder ao seu contato e conduzir esta tratativa comercial. <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
+      <button class="button primary" type="submit" disabled>Agende uma conversa</button>
+      <p class="contact-form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <noscript><p>Ative o JavaScript para enviar este formulário.</p></noscript>
+    </form>
+
+    <div
         class="hero-actions"
         style="justify-content:center"
       >
@@ -729,13 +765,6 @@
           href="/dropper/"
         >
           Conheça a Dropper
-        </a>
-
-        <a
-          class="button secondary"
-          href="mailto:contato@nurlift.com"
-        >
-          Agende uma conversa
         </a>
 
       </div>
@@ -795,6 +824,7 @@
 
 
 <script src="/script.js"></script>
+<script src="/contact-form.js" defer></script>
 
 </body>
 </html>
