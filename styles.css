@@ -987,9 +987,9 @@ section {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(0, 360px) minmax(0, 340px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 160px) minmax(0, 190px) auto;
   align-items: start;
-  gap: 8px 32px;
+  gap: 8px 24px;
 }
 .footer-grid > :last-child {
   grid-column: 1 / -1;
@@ -999,24 +999,17 @@ section {
 .footer-tagline { margin-top: 2px; font-size: 0.95rem; line-height: 1.4; }
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2px 20px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
   line-height: 1.4;
   font-size: 0.95rem;
   font-weight: 500;
 }
 .footer-links a { padding: 5px 0; }
-.footer-links a:nth-child(1) { grid-area: 1 / 1; }
-.footer-links a:nth-child(2) { grid-area: 2 / 1; }
-.footer-links a:nth-child(5) { grid-area: 3 / 1; }
-.footer-links a:nth-child(3) { grid-area: 1 / 2; }
-.footer-links a:nth-child(4) { grid-area: 2 / 2; }
-.footer-links a:nth-child(6) { grid-area: 3 / 2; }
 .footer-links a:hover { color: var(--blue); text-decoration: underline; }
 .footer-links a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
 @media (max-width: 980px) {
-  .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
-  .footer-links { width: min(100%, 340px); gap: 2px 16px; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
 }
 
 
@@ -1413,3 +1406,8 @@ section {
   margin-bottom: 6px;
 }
 .dropper-use-cases .card p { color: #444b58; }
+
+.footer-grid > .footer-contact { margin-top: 0; flex-wrap: nowrap; }
+@media (max-width: 640px) {
+  .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+}
