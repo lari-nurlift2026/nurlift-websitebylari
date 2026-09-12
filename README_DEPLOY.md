@@ -50,7 +50,7 @@ For this immediate MVP, the static Plesk version is the fastest route.
 Use Lovable in parallel to iterate on the visual/UI version. When Lovable's version is approved, connect it to GitHub and replace the static MVP with the built production output or host Lovable directly.
 
 ## Before production
-- Confirm the real commercial contact email; this V1 currently uses `hello@nurlift.com` as a placeholder.
+- Use `contato@nurlift.com` as the active commercial contact and backend delivery email.
 - Add legal/privacy links.
 - Add analytics/tag manager if needed.
 - Add final logo/assets and favicon.

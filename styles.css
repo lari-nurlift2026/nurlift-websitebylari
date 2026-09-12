@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Korolev";
-  src: url("/assets/fonts/Korolev Light.otf") format("opentype");
+  src: url("/fonts/Korolev Light.otf") format("opentype");
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "Korolev";
-  src: url("/assets/fonts/Korolev Medium.otf") format("opentype");
+  src: url("/fonts/Korolev Medium.otf") format("opentype");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: "Korolev";
-  src: url("/assets/fonts/Korolev Bold.otf") format("opentype");
+  src: url("/fonts/Korolev Bold.otf") format("opentype");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -1315,4 +1315,95 @@ section {
 @media (max-width: 640px) {
   .contact-form-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .contact-form .button { width: 100%; }
+}
+
+/* QA-059: compact institutional contact, without changing existing footer links. */
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: 1rem;
+}
+.footer-contact a { display: inline-flex; align-items: center; gap: 6px; }
+.footer-contact img { width: 16px; height: 18px; object-fit: contain; }
+.footer-contact a:hover { color: var(--blue); text-decoration: underline; }
+.footer-contact a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+/* QA-061: light-background comparison cards, mobile PT and EN only. */
+@media (max-width: 640px) {
+  .competitive-intelligence .cards { margin-top: 24px; gap: 12px; }
+  .competitive-intelligence .card {
+    min-height: 0;
+    padding: 16px;
+    border-color: var(--line);
+    background: var(--cloud);
+  }
+  .competitive-intelligence .card strong {
+    margin-bottom: 6px;
+    color: var(--ink);
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+  .competitive-intelligence .card p {
+    color: #444b58;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* QA-061: readable comparison copy at every viewport, without changing the grid. */
+.competitive-intelligence .card strong { color: var(--ink); font-weight: 700; }
+.competitive-intelligence .card p { color: #444b58; }
+
+/* QA-058: reuse the primary navigation in a compact responsive menu. */
+.nav-toggle { display: none; }
+@media (max-width: 980px) {
+  .nav { gap: 12px; }
+  .nav-toggle {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: white;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+  .nav-toggle:focus-visible, .nav-links a:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+  }
+  .nav-links.is-open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 14px;
+    right: 14px;
+    max-height: calc(100dvh - 100px);
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+  .nav-links.is-open a { padding: 10px 12px; border-radius: 6px; }
+  .nav-links.is-open a:hover { background: var(--cloud); }
 }
