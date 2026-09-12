@@ -1417,3 +1417,9 @@ section {
 @media (min-width: 641px) and (max-width: 980px) {
   .footer-grid > .footer-contact { grid-column: 1; justify-self: start; }
 }
+
+/* Mobile only: copyright follows the contact row. */
+@media (max-width: 640px) {
+  .footer-grid > .footer-contact { grid-row: 4; }
+  .footer-grid > :nth-child(4) { grid-row: 5; margin-top: -6px; }
+}
