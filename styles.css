@@ -981,48 +981,42 @@ section {
    ========================================================= */
 
 .footer {
-  padding:
-    46px 0;
-
+  padding: 16px 0;
   color: var(--muted);
-
   background: var(--white);
 }
-
 .footer-grid {
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 28px;
-
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 360px) minmax(0, 340px);
+  align-items: start;
+  gap: 8px 32px;
 }
-
-.footer-brand {
-  color: var(--ink);
-
-  font-size: 1.4rem;
-  font-weight: 700;
+.footer-grid > :last-child {
+  grid-column: 1 / -1;
+  font-size: 0.82rem;
 }
-
-.footer-tagline {
-  margin-top: 4px;
-}
-
+.footer-brand { color: var(--ink); font-size: 1.4rem; font-weight: 700; }
+.footer-tagline { margin-top: 2px; font-size: 0.95rem; line-height: 1.4; }
 .footer-links {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 14px;
-
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 20px;
+  line-height: 1.4;
+  font-size: 0.95rem;
   font-weight: 500;
 }
-
-.footer-links a:hover {
-  color: var(--blue);
+.footer-links a { padding: 5px 0; }
+.footer-links a:nth-child(1) { grid-area: 1 / 1; }
+.footer-links a:nth-child(2) { grid-area: 2 / 1; }
+.footer-links a:nth-child(5) { grid-area: 3 / 1; }
+.footer-links a:nth-child(3) { grid-area: 1 / 2; }
+.footer-links a:nth-child(4) { grid-area: 2 / 2; }
+.footer-links a:nth-child(6) { grid-area: 3 / 2; }
+.footer-links a:hover { color: var(--blue); text-decoration: underline; }
+.footer-links a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+@media (max-width: 980px) {
+  .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .footer-links { width: min(100%, 340px); gap: 2px 16px; }
 }
 
 
@@ -1322,8 +1316,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 2px;
   color: var(--ink);
   font-size: 1rem;
 }
@@ -1407,3 +1401,15 @@ section {
   .nav-links.is-open a { padding: 10px 12px; border-radius: 6px; }
   .nav-links.is-open a:hover { background: var(--cloud); }
 }
+
+.footer-contact a[target="_blank"]:hover { background: var(--cloud); box-shadow: 0 0 0 4px var(--cloud); border-radius: 3px; }
+
+.footer-contact a[target="_blank"] { justify-content: center; width: 44px; height: 44px; flex-shrink: 0; }
+
+/* Dropper Use Cases: scoped readability and title-to-description spacing. */
+.dropper-use-cases .card strong {
+  color: var(--ink);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.dropper-use-cases .card p { color: #444b58; }
