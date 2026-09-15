@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://nurlift.com/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://nurlift.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://nurlift.com/en/"/></url>
-  <url><loc>https://nurlift.com/en/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://nurlift.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://nurlift.com/en/"/></url>
+  <url>
+    <loc>https://nurlift.com/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nurlift.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nurlift.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nurlift.com/"/>
+  </url>
+  <url>
+    <loc>https://nurlift.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nurlift.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nurlift.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nurlift.com/"/>
+  </url>
+  <url>
+    <loc>https://nurlift.com/dropper/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nurlift.com/dropper/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nurlift.com/en/dropper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nurlift.com/dropper/"/>
+  </url>
+  <url>
+    <loc>https://nurlift.com/en/dropper/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nurlift.com/dropper/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nurlift.com/en/dropper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nurlift.com/dropper/"/>
+  </url>
+  <url>
+    <loc>https://nurlift.com/local-discovery/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nurlift.com/local-discovery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nurlift.com/en/local-discovery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nurlift.com/local-discovery/"/>
+  </url>
+  <url>
+    <loc>https://nurlift.com/en/local-discovery/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nurlift.com/local-discovery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nurlift.com/en/local-discovery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nurlift.com/local-discovery/"/>
+  </url>
 </urlset>
