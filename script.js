@@ -6,6 +6,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (window.location.hash !== id) history.pushState(null, '', id);
     }
   });
 });
