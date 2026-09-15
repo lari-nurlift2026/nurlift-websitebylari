@@ -258,14 +258,14 @@ p {
 }
 
 .button.primary {
-  color: var(--white);
+  color: var(--ink);
 
   border-color: transparent;
 
   background:
     linear-gradient(
       100deg,
-      var(--blue),
+      var(--powder),
       var(--cyan),
       var(--mint)
     );
