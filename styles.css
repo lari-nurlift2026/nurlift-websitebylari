@@ -1423,3 +1423,9 @@ section {
   .footer-grid > .footer-contact { grid-row: 4; }
   .footer-grid > :nth-child(4) { grid-row: 5; margin-top: -6px; }
 }
+
+/* QA-066: communicate the current section in primary navigation. */
+.nav-links a[aria-current="page"] {
+  color: var(--blue);
+  font-weight: 700;
+}
