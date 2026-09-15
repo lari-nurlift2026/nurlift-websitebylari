@@ -416,6 +416,11 @@ h1 {
   font-weight: 700;
 }
 
+/* QA-063: keep the Portuguese Local Discovery proposition and CTA within the initial viewport. */
+html[lang="pt-BR"] .page-local-discovery h1 {
+  font-size: clamp(3.5rem, 5.2vw, 4.6rem);
+}
+
 .lead-hero {
   max-width: 750px;
 
@@ -1422,9 +1427,4 @@ section {
 @media (max-width: 640px) {
   .footer-grid > .footer-contact { grid-row: 4; }
   .footer-grid > :nth-child(4) { grid-row: 5; margin-top: -6px; }
-}
-
-/* QA-063: keep the Portuguese Local Discovery proposition and CTA within the initial viewport. */
-html[lang="pt-BR"] .page-local-discovery h1 {
-  font-size: clamp(3.5rem, 5.2vw, 4.6rem);
 }
