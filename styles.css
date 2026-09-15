@@ -114,19 +114,17 @@ a {
 .skip-link {
   position: fixed;
   top: 8px;
-  left: 8px;
+  left: -10000px;
   z-index: 1000;
   padding: 12px 16px;
   border-radius: var(--radius-small);
   color: var(--white);
   background: var(--ink);
   font-weight: 700;
-  transform: translateY(-150%);
-  transition: transform 0.18s ease;
 }
 
 .skip-link:focus {
-  transform: translateY(0);
+  left: 8px;
   outline: 3px solid var(--cyan);
   outline-offset: 3px;
 }
