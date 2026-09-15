@@ -1423,3 +1423,15 @@ section {
   .footer-grid > .footer-contact { grid-row: 4; }
   .footer-grid > :nth-child(4) { grid-row: 5; margin-top: -6px; }
 }
+
+/* QA-069: respect the visitor's reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
