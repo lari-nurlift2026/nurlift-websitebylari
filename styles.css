@@ -185,6 +185,12 @@ p {
   color: var(--blue);
 }
 
+/* QA-066: communicate the current section in primary navigation. */
+.nav-links a[aria-current="page"] {
+  color: var(--blue);
+  font-weight: 700;
+}
+
 
 /* =========================================================
    5. LANGUAGE
