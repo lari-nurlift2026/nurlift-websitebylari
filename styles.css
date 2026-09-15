@@ -1200,6 +1200,15 @@ section {
     grid-template-columns: 1fr;
   }
 
+  #how-it-works .card {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  #how-it-works .card strong {
+    margin-bottom: 8px;
+  }
+
   .local-box {
     padding:
       30px 24px;
