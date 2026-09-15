@@ -5,7 +5,10 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const target = document.querySelector(id);
     if (target) {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+      if (link.classList.contains('skip-link')) target.focus({ preventScroll: true });
+      target.scrollIntoView({ behavior, block: 'start' });
+      if (window.location.hash !== id) history.pushState(null, '', id);
     }
   });
 });
